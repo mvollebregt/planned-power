@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Web3Service} from '../../util/web3.service';
-import { MatSnackBar } from '@angular/material';
+import {Web3Service} from '../../shared/web3/web3.service';
+import {MatSnackBar} from '@angular/material';
 
 declare let require: any;
-const metacoin_artifacts = require('../../../../build/contracts/MetaCoin.json');
+const metacoinArtifacts = require('../../../../build/contracts/MetaCoin.json');
 
 @Component({
   selector: 'app-meta-sender',
@@ -31,7 +31,7 @@ export class MetaSenderComponent implements OnInit {
     console.log('OnInit: ' + this.web3Service);
     console.log(this);
     this.watchAccount();
-    this.web3Service.artifactsToContract(metacoin_artifacts)
+    this.web3Service.artifactsToContract(metacoinArtifacts)
       .then((MetaCoinAbstraction) => {
         this.MetaCoin = MetaCoinAbstraction;
         this.MetaCoin.deployed().then(deployed => {

@@ -1,9 +1,9 @@
-import {TestBed, inject} from '@angular/core/testing';
-const Web3 = require('web3');
-
+import {inject, TestBed} from '@angular/core/testing';
 import {Web3Service} from './web3.service';
 
-import metacoin_artifacts from '../../../build/contracts/MetaCoin.json';
+import metacoin_artifacts from '../../../../build/contracts/MetaCoin.json';
+
+const Web3 = require('web3');
 
 declare let window: any;
 
