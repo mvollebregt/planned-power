@@ -9,7 +9,8 @@
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "node patch.js"
+    "postinstall": "node patch.js",
+    "cm": "truffle compile && truffle migrate"
   },
   "private": true,
   "dependencies": {
