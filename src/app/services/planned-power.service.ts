@@ -32,9 +32,10 @@ export class PlannedPowerService {
     );
   }
 
-  setPredictions(predictions: Observable<Consumption[]>): Observable<void> {
+  setPredictions(predictions: Consumption[]): Observable<void> {
+    console.log(predictions);
     return this.plannedPower.pipe(
-      flatMap(contract => from(contract.setPredictions.sendTransaction(predictions)))
+      flatMap(contract => from(contract.setPredictions.sendTransaction(predictions, {from: web3.eth.defaultAccount})))
     );
   }
 }
