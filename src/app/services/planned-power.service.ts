@@ -28,7 +28,7 @@ export class PlannedPowerService {
 
   getPredictions(): Observable<Consumption[]> {
     return this.plannedPower.pipe(
-      flatMap(contract => from(contract.getPredictions.call()))
+      flatMap(contract => from(contract.getPredictions.call({from: web3.eth.defaultAccount})))
     );
   }
 
