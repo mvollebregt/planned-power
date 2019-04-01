@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {PlannedPowerService} from '../services/planned-power.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +8,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() {
+  constructor(private plannedPowerService: PlannedPowerService) {
   }
 
   ngOnInit() {
+    this.plannedPowerService.getPredictions().subscribe(console.log);
   }
 
 }

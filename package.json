@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "node patch.js",
-    "cm": "truffle compile && truffle migrate"
+    "cm": "truffle compile --reset && truffle migrate --reset"
   },
   "private": true,
   "dependencies": {
