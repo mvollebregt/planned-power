@@ -1,10 +1,10 @@
-import {AppPage} from './app.po';
+import {MetaSenderPage} from './meta-sender.po';
 
 describe('angular-truffle-box App', () => {
-  let page: AppPage;
+  let page: MetaSenderPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MetaSenderPage();
   });
 
   it('should display welcome message', () => {

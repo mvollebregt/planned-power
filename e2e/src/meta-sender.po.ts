@@ -1,9 +1,9 @@
 import {browser, by, element} from 'protractor';
 
-export class AppPage {
+export class MetaSenderPage {
   navigateTo() {
     browser.waitForAngularEnabled(false);
-    browser.get('/');
+    browser.get('/examples/meta-sender');
     return browser.driver.sleep(1000);
   }
 

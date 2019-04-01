@@ -1,11 +1,11 @@
-import {AppPage} from './app.po';
+import {MetaSenderPage} from './meta-sender.po';
 import {browser} from 'protractor';
 
 describe('angular-truffle-box meta-sender', () => {
-  let page: AppPage;
+  let page: MetaSenderPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MetaSenderPage();
   });
 
   it('should transfer money', () => {
